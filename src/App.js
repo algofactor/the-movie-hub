@@ -13,13 +13,16 @@ function App() {
 		typography: {
 			fontFamily: ["Montserrat", "sans-serif"].join(","),
 		},
+    palette: {
+      mode: "dark",
+    },
 	});
 	return (
 		<>
 			<Router>
 				<ThemeProvider theme={theme}>
 					<Header />
-					<div className='min-h-[100vh] bg-[#39445a] text-white pt-[50px] md:pt-[60px] lg:pt-[90px] pb-[70px]'>
+					<div className='min-h-[100vh] bg-[#181c27] text-white pt-[50px] md:pt-[60px] lg:pt-[90px] pb-[70px]'>
 						<Container>
 							<Routes>
 								<Route path='/' element={<Trending />} />

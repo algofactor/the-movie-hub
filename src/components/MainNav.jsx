@@ -17,12 +17,12 @@ const MainNav = () => {
 		} else if (value === 3) {
 			navigate("/search");
 		}
-	}, [value]);
+	}, [value, navigate]);
 
 	return (
 		<BottomNavigation
 			sx={{
-				backgroundColor: "#2d313a",
+				backgroundColor: "#11141c",
 				position: "fixed",
 				bottom: 0,
 				zIndex: 100,

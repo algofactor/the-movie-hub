@@ -3,5 +3,27 @@
 @tailwind utilities;
 
 *{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+	width: 6px;
+	height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #2D313A;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 100vh;
+	background: #3F51B5;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: #3748a5;
 }
