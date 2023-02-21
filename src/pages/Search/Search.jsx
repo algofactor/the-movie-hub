@@ -45,12 +45,6 @@ const Search = () => {
 					variant='filled'
 					onChange={(e) => setSearchText(e.target.value)}
 				/>
-				{/* <Button
-					variant='contained'
-					sx={{ background: "white" }}
-					onClick={fetchSearch}>
-					<SearchIcon />
-				</Button> */}
 			</div>
 			<Tabs
 				value={type}
