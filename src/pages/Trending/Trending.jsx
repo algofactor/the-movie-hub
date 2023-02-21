@@ -21,8 +21,8 @@ const Trending = () => {
 
 	return (
 		<div>
-			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.5rem] md:text-[1.8rem] lg:text-[2.5rem]'>
-				Trending
+			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.1rem] md:text-[1.5rem] lg:text-[1.8rem] mb-4'>
+				Trending Today
 			</span>
 			<div className='flex flex-wrap justify-center gap-4'>
 				{content &&

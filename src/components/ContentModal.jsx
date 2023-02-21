@@ -81,16 +81,18 @@ export default function ContentModal({ children, media_type, id }) {
 				<Fade in={open}>
 					<Box sx={style} className='contentContainer'>
 						{content && (
-							<div className='flex flex-col lg:flex-row gap-4'>
-								<img
-									src={
-										content.poster_path
-											? `${img_500}/${content.poster_path}`
-											: unavailable
-									}
-									alt={content.name || content.title}
-									className='hidden lg:flex flex-[1] rounded-[10px] mb-2'
-								/>
+							<div className='flex flex-col lg:flex-row h-[100%] gap-6'>
+								<div className='hidden lg:flex lg:w-[40%] justify-center mb-2'>
+									<img
+										src={
+											content.poster_path
+												? `${img_500}/${content.poster_path}`
+												: unavailable
+										}
+										alt={content.name || content.title}
+										className=' h-auto w-auto rounded-[10px]'
+									/>
+								</div>
 								<img
 									src={
 										content.poster_path
@@ -100,7 +102,7 @@ export default function ContentModal({ children, media_type, id }) {
 									alt={content.name || content.title}
 									className='rounded-[10px] mb-2 flex flex-[1] lg:hidden'
 								/>
-								<div className='flex-[1]'>
+								<div className='lg:w-[60%]'>
 									<div className='text-center font-extralight uppercase tracking-wider text-md lg:text-xl mb-2'>
 										{content.name || content.title}(
 										{(
@@ -117,13 +119,13 @@ export default function ContentModal({ children, media_type, id }) {
 											</span>
 										)}
 									</div>
-									<div className='py-2 px-4 border border-white rounded-[10px] text-xs lg:text-sm font-extralight leading-7 mb-6 h-[150px] overflow-y-scroll contentDesc'>
-										{content.overview ? content.overview : 'Not available.....'}
+									<div className='py-2 px-4 border border-white rounded-[10px] text-xs lg:text-sm font-extralight leading-[2] lg:leading-[2] mb-6 h-[150px] overflow-y-scroll contentDesc'>
+										{content.overview ? content.overview : "Not available....."}
 									</div>
-									<div className="max-w-[700px] mb-6 mx-auto">
-                                        <Carousel media_type={media_type} id={id} />
-                                    </div>
-									<div className='flex justify-center'>
+									<div className='max-w-full mb-6 mx-auto'>
+										<Carousel media_type={media_type} id={id} />
+									</div>
+									<div className='flex justify-center mb-8'>
 										<Button
 											variant='contained'
 											startIcon={<YouTube />}

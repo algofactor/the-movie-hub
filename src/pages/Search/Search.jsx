@@ -33,8 +33,8 @@ const Search = () => {
 
 	return (
 		<div>
-			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.5rem] md:text-[1.8rem] lg:text-[2.5rem]'>
-				Search
+			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.1rem] md:text-[1.5rem] lg:text-[1.8rem] mb-4'>
+				Find a movie or tv series
 			</span>
 			<div className='flex gap-3'>
 				<TextField
@@ -56,13 +56,14 @@ const Search = () => {
 				value={type}
 				indicatorColor='primary'
 				textColor='primary'
-				sx={{ display: "flex", width: "100%" }}
+				sx={{ display: "flex", width: "100%", fontSize: '10px' }}
+				className="text-xs"
 				onChange={(event, newValue) => {
 					setType(newValue);
 					setPage(1);
 				}}>
-				<Tab label='Search Movies' sx={{ flex: 1 }} />
-				<Tab label='Search TV Series' sx={{ flex: 1 }} />
+				<Tab label='Search Movies' sx={{ flex: 1, fontSize: '10px' }} />
+				<Tab label='Search TV Series' sx={{ flex: 1, fontSize: '10px' }} />
 			</Tabs>
 
 			<div className='flex flex-wrap justify-center gap-4'>

@@ -10,11 +10,12 @@ const Carousel = ({ media_type, id }) => {
 	const [credits, setCredits] = useState();
 
 	const items = credits?.map((c) => (
-		<div>
+		<div className="mx-2">
 			<img
 				src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
 				alt={c?.name}
 				onDragStart={handleDragStart}
+				className='rounded-[10px]'
 			/>
 			<span className='font-extralight text-[8px] lg:text-xs'>{c?.name}</span>
 		</div>

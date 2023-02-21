@@ -30,8 +30,8 @@ const Series = () => {
 
 	return (
 		<div>
-			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.5rem] md:text-[1.8rem] lg:text-[2.5rem]'>
-				TV Series
+			<span className='uppercase flex justify-center p-1 text-white font-extralight text-[1.1rem] md:text-[1.5rem] lg:text-[1.8rem] mb-4'>
+				Discover TV Series
 			</span>
 			<Genres
 				type='tv'
